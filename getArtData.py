@@ -18,7 +18,6 @@ def getArtworkInfo(data):
         raw_image= artwork["_links"]["image"]
         image= raw_image['href'].replace("{image_version}", "large")
         additional= artwork["additional_information"]
-        print(image)
         
         art_obj= Artwork(art_id, title, date, image, additional)
         artwork_list.append(art_obj)
