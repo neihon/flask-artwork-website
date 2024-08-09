@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Artwork Information</title>
+    </head>
+    <body>
+        <h1 id="paintings" style="text-align: center"><b>Available Paintings<b></h1>
+        <ul class="available-artworks" style="text-align: center">
+            {% for artwork in artworks %}
+            <li class="artwork-element-painting" style="text-align: center">
+                <h2>{{ artwork.title }}</h2>
+                <img src="{{ artwork.image }}" alt="{{ artwork.title }} image">
+                <p><strong>Painting Id:</strong> {{ artwork.art_id }}</p>
+                <p><strong>Date:</strong> {{ artwork.date }}</p>
+                <p><strong>Additional Info:</strong> {{ artwork.additional }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
